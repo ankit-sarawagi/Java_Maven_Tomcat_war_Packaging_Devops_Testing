@@ -7,8 +7,6 @@ trigger:
 - master
 
 pool: 'AZURE_AWS Agentpool'
-
-
 steps:
 - task: Maven@3
   inputs:
@@ -16,3 +14,11 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: TomcatDeployment@1
+  inputs:
+    TomcatUrl: 'http://52.66.96.11:8080/'
+    Username: 'deployer'
+    Password: 'deployer'
+    Warfile: 'target/mvnwebapp.war'
+    Context: '/demoapp'
+    ServerVersion: '7OrAbove'
