@@ -16,7 +16,7 @@ steps:
     goals: 'package'
 - task: TomcatDeployment@1
   inputs:
-    TomcatUrl: 'http://52.66.96.11:8080/'
+    TomcatUrl: 'http://localhost:8080/'
     Username: 'deployer'
     Password: 'deployer'
     Warfile: 'target/mvnwebapp.war'
