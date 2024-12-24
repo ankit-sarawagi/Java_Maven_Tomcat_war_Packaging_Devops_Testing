@@ -19,6 +19,6 @@ steps:
     TomcatUrl: 'http://localhost:8080/'
     Username: 'deployer'
     Password: 'deployer'
-    Warfile: 'target/mvnwebapp.war'
-    Context: '/demoapp'
+    Warfile: 'target/mvnwebapps.war'
+    Context: '/demoapps'
     ServerVersion: '7OrAbove'
